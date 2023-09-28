@@ -24,3 +24,44 @@
     isolation: isolate;
   }
 /** end css Reset **/
+
+/** #color pallet **/
+:root {
+  --Primary: #1D91CC;
+    /* #color Tint*/
+    --Tint-5: #77BDE0;
+    --Tint-4: #A5D3EB;
+    --Tint-3: #BBDEF0;
+    --Tint-2: #D2E9F5;
+    --Tint-1: #E8F4FA;
+      /** #Color Shade **/
+      --Shade-5: #061D29;
+      --Shade-4: #092B3D;
+      --Shade-3: #0C3A52;
+      --Shade-2: #11577A;
+      --Shade-1: #1774A3;
+        /** #Color Gray **/
+        --Black: #0C0C0C;
+        --Gray-9: #202020;
+        --Gray-8: #404040;
+        --Gray-7: #606060;
+        --Gray-6: #868686;
+        --Gray-5: #ADADAD;
+        --Gray-4: #CBCBCB;
+        --Gray-3: #DFDFDF;
+        --Gray-2: #EDEDED;
+        --Gray-1: #F9F9F9;
+          /** #Color Error**/
+          --Error: #C30000;
+          --Error-Light-1: #ED2E2E;
+          --Error-Light-2: #FFF2F2;
+            /** #Color Success **/
+            --Success: #00966D;
+            --Success-Light-2: #00BA88;
+            --Success-Light-2: #F3FDFA;
+              /** #Color Warning **/
+              --Warning: #A9791C;
+              --Warning-Light-2: #F4B740;
+              --Warning-Light-2: #FFF8E1;
+}
+/** #End color pallet **/
