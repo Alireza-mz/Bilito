@@ -65,3 +65,20 @@
               --Warning-Light-2: #FFF8E1;
 }
 /** #End color pallet **/
+
+/** spacing **/
+:root {
+--s-8px: 8px;
+--s-12px: 12px;
+--s-16px: 16px;
+--s-24px: 24px;
+--s-32px: 32px;
+--s-40px: 40px;
+--s-48px: 48px;
+--s-56px: 56px;
+--s-64px: 64px;
+--s-80px: 80px;
+--s-120px: 120px;
+--s-160px: 160px;
+}
+/** #End spacing **/
