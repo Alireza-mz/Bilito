@@ -27,7 +27,7 @@
 
 /** #color pallet **/
 :root {
-  --Primary: #1D91CC;
+  --Primary-blue: #1D91CC;
     /* #color Tint*/
     --Tint-5: #77BDE0;
     --Tint-4: #A5D3EB;
@@ -82,3 +82,16 @@
 --s-160px: 160px;
 }
 /** #End spacing **/
+
+/** Shadows **/
+:root {
+  --Drop-shadow-2: box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+  --Drop-shadow-4: box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  --Drop-shadow-6: box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.25);
+  --Drop-shadow-8: box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.25);
+  --Drop-shadow-12: box-shadow: 0px 12px 12px 0px rgba(0, 0, 0, 0.25);
+  --Drop-shadow-16: box-shadow: 0px 16px 16px 0px rgba(0, 0, 0, 0.25);
+  --Cards-shadow: box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.10), 0px 4px 4px 0px rgba(0, 0, 0, 0.09), 0px 9px 5px 0px rgba(0, 0, 0, 0.05), 0px 16px 6px 0px rgba(0, 0, 0, 0.01), 0px 25px 7px 0px rgba(0, 0, 0, 0.00);
+  --contactCards-shadow: box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.10), 0px 3px 6px 0px rgba(0, 0, 0, 0.10), 0px 11px 11px 0px rgba(0, 0, 0, 0.09), 0px 24px 14px 0px rgba(0, 0, 0, 0.05), 0px 42px 17px 0px rgba(0, 0, 0, 0.01), 0px 66px 18px 0px rgba(0, 0, 0, 0.00);
+}
+/** #End Shadows **/
