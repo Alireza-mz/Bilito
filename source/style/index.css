@@ -83,15 +83,110 @@
 }
 /** #End spacing **/
 
-/** Shadows **/
+/** #Shadows **/
 :root {
-  --Drop-shadow-2: box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
-  --Drop-shadow-4: box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  --Drop-shadow-6: box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.25);
-  --Drop-shadow-8: box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.25);
-  --Drop-shadow-12: box-shadow: 0px 12px 12px 0px rgba(0, 0, 0, 0.25);
-  --Drop-shadow-16: box-shadow: 0px 16px 16px 0px rgba(0, 0, 0, 0.25);
-  --Cards-shadow: box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.10), 0px 4px 4px 0px rgba(0, 0, 0, 0.09), 0px 9px 5px 0px rgba(0, 0, 0, 0.05), 0px 16px 6px 0px rgba(0, 0, 0, 0.01), 0px 25px 7px 0px rgba(0, 0, 0, 0.00);
-  --contactCards-shadow: box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.10), 0px 3px 6px 0px rgba(0, 0, 0, 0.10), 0px 11px 11px 0px rgba(0, 0, 0, 0.09), 0px 24px 14px 0px rgba(0, 0, 0, 0.05), 0px 42px 17px 0px rgba(0, 0, 0, 0.01), 0px 66px 18px 0px rgba(0, 0, 0, 0.00);
+  --Drop-shadow-2: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+  --Drop-shadow-4: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  --Drop-shadow-6: 0px 6px 6px 0px rgba(0, 0, 0, 0.25);
+  --Drop-shadow-8: 0px 8px 8px 0px rgba(0, 0, 0, 0.25);
+  --Drop-shadow-12: 0px 12px 12px 0px rgba(0, 0, 0, 0.25);
+  --Drop-shadow-16: 0px 16px 16px 0px rgba(0, 0, 0, 0.25);
+  --Cards-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.10), 0px 4px 4px 0px rgba(0, 0, 0, 0.09), 0px 9px 5px 0px rgba(0, 0, 0, 0.05), 0px 16px 6px 0px rgba(0, 0, 0, 0.01), 0px 25px 7px 0px rgba(0, 0, 0, 0.00);
+  --contactCards-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.10), 0px 3px 6px 0px rgba(0, 0, 0, 0.10), 0px 11px 11px 0px rgba(0, 0, 0, 0.09), 0px 24px 14px 0px rgba(0, 0, 0, 0.05), 0px 42px 17px 0px rgba(0, 0, 0, 0.01), 0px 66px 18px 0px rgba(0, 0, 0, 0.00);
 }
 /** #End Shadows **/
+
+/** #Fonts **/
+/* Thin */
+@font-face {
+  font-family: "IRANSans-Thin";
+  src: url("../Fonts/iransans/Thin/Thin.eot");
+  src: url("../Fonts/iransans/Thin/Thin.eot?#iefix")format("embedded-opentype"),
+  url("../Fonts/iransans/Thin/Thin.woff2")format("woff2"),
+  url("../Fonts/iransans/Thin/Thin.woff")format("woff"),
+  url("../Fonts/iransans/Thin/Thin.ttf")format("truetype")
+}
+/* UltraLight */
+@font-face {
+  font-family: "IRANSans-UltraLight";
+  src: url("../Fonts/iransans/UltraLight/UltraLight.eot");
+  src: url("../Fonts/iransans/UltraLight/UltraLight.eot?#iefix")format("embedded-opentype"),
+  url("../Fonts/iransans/UltraLight/UltraLight.woff2")format("woff2"),
+  url("../Fonts/iransans/UltraLight/UltraLight.woff")format("woff"),
+  url("../Fonts/iransans/UltraLight/UltraLight.ttf")format("truetype")
+}
+/* Light */
+@font-face {
+  font-family: "IRANSans-Light";
+  src: url("../Fonts/iransans/Light/Light.eot");
+  src: url("../Fonts/iransans/Light/Light.eot?#iefix")format("embedded-opentype"),
+  url("../Fonts/iransans/Light/Light.eot.woff2")format("woff2"),
+  url("../Fonts/iransans/Light/Light.eot.woff")format("woff"),
+  url("../Fonts/iransans/Light/Light.ttf")format("truetype")
+}
+/* Regular */
+@font-face {
+  font-family: "IRANSans-Regular";
+  src: url("../Fonts/iransans/Regular/Regular.eot");
+  src: url("../Fonts/iransans/Regular/Regular.eot?#iefix")format("embedded-opentype"),
+  url("../Fonts/iransans/Regular/Regular.woff2")format("woff2"),
+  url("../Fonts/iransans/Regular/Regular.woff")format("woff"),
+  url("../Fonts/iransans/Regular/Regular.ttf")format("truetype")
+}
+/* Medium */
+@font-face {
+  font-family: "IRANSans-Medium";
+  src: url("../Fonts/iransans/Medium/Medium.eot");
+  src: url("../Fonts/iransans/Medium/Medium.eot?#iefix")format("embedded-opentype"),
+  url("../Fonts/iransans/Medium/Medium.woff2")format("woff2"),
+  url("../Fonts/iransans/Medium/Medium.woff")format("woff"),
+  url("../Fonts/iransans/Medium/Medium.ttf")format("truetype")
+}
+/* Demibold */
+@font-face {
+  font-family: "IRANSans-Demibold";
+  src: url("../Fonts/iransans/Demibold/Demibold.eot");
+  src: url("../Fonts/iransans/Demibold/Demibold.eot")format("embedded-opentype"),
+  url("../Fonts/iransans/Demibold/Demibold.woff2")format("woff2"),
+  url("../Fonts/iransans/Demibold/Demibold.woff")format("woff"),
+  url("../Fonts/iransans/Demibold/Demibold.ttf")format("truetype")
+}
+/* Bold */
+@font-face {
+  font-family: "IRANSans-Bold";
+  src: url("../Fonts/iransans/Bold/Bold.eot");
+  src: url("../Fonts/iransans/Bold/Bold.eot?#iefix")format("embedded-opentype"),
+  url("../Fonts/iransans/Bold/Bold.woff2")format("woff2"),
+  url("../Fonts/iransans/Bold/Bold.woff")format("woff"),
+  url("../Fonts/iransans/Bold/Bold.ttf")format("truetype")
+}
+/* Extrabold */
+@font-face {
+  font-family: "IRANSans-Extrabold";
+  src: url("../Fonts/iransans/Extrabold/Extrabold.eot");
+  src: url("../Fonts/iransans/Extrabold/Extrabold.eot?#iefix")format("embedded-opentype"),
+  url("../Fonts/iransans/Extrabold/Extrabold.woff2")format("woff2"),
+  url("../Fonts/iransans/Extrabold/Extrabold.woff")format("woff"),
+  url("../Fonts/iransans/Extrabold/Extrabold.ttf")format("truetype")
+}
+/* Black */
+@font-face {
+  font-family: "IRANSans-Black";
+  src: url("../Fonts/iransans/Black/Black.eot");
+  src: url("../Fonts/iransans/Black/Black.eot?#iefix")format("embedded-opentype"),
+  url("../Fonts/iransans/Black/Black.woff2")format("woff2"),
+  url("../Fonts/iransans/Black/Black.woff")format("woff"),
+  url("../Fonts/iransans/Black/Black.ttf")format("truetype")
+}
+:root {
+  --Font-IRANSans-Thin: 'IRANSans-Thin';
+  --Font-IRANSans-Light: 'IRANSans-Light';
+  --Font-IRANSans-Ultralight: 'IRANSans-Ultralight';
+  --Font-IRANSans-Regular: 'IRANSans-Regular';
+  --Font-IRANSans-Medium: 'IRANSans-Medium';
+  --Font-IRANSans-Demibold: 'IRANSans-Demibold';
+  --Font-IRANSans-Bold: 'IRANSans-Bold';
+  --Font-IRANSans-Extrabold: 'IRANSans-Extrabold';
+  --Font-IRANSans-Black: 'IRANSans-Black';
+}
+/* #End Font */
