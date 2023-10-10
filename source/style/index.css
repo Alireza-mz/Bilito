@@ -27,7 +27,8 @@
 
 /** #color pallet **/
 :root {
-  --Primary-blue: #1D91CC;
+  --Primary-blue-p: #1D91CC;
+  --neutral-white: #FFF;
     /* #color Tint*/
     --Tint-5: #77BDE0;
     --Tint-4: #A5D3EB;
@@ -66,22 +67,40 @@
 }
 /** #End color pallet **/
 
-/** spacing **/
+/** spacing (gap) **/
 :root {
---s-8px: 8px;
---s-12px: 12px;
---s-16px: 16px;
---s-24px: 24px;
---s-32px: 32px;
---s-40px: 40px;
---s-48px: 48px;
---s-56px: 56px;
---s-64px: 64px;
---s-80px: 80px;
---s-120px: 120px;
---s-160px: 160px;
+--gap-8px: 8px;
+--gap-12px: 12px;
+--gap-16px: 16px;
+--gap-24px: 24px;
+--gap-32px: 32px;
+--gap-40px: 40px;
+--gap-48px: 48px;
+--gap-56px: 56px;
+--gap-64px: 64px;
+--gap-80px: 80px;
+--gap-120px: 120px;
+--gap-160px: 160px;
 }
 /** #End spacing **/
+
+/* value pixel */
+:root {
+--value-8px: 8px;
+--value-12px: 12px;
+--value-16px: 16px;
+--value-24px: 24px;
+--value-32px: 32px;
+--value-40px: 40px;
+--value-48px: 48px;
+--value-56px: 56px;
+--value-64px: 64px;
+--value-80px: 80px;
+--value-120px: 120px;
+--value-160px: 160px;
+}
+/* end value pixle */
+
 
 /** #Shadows **/
 :root {
@@ -190,3 +209,8 @@
   --Font-IRANSans-Black: 'IRANSans-Black';
 }
 /* #End Font */
+
+/*  */
+  html {
+    direction: rtl;
+  }
