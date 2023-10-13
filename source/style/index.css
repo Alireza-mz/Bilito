@@ -29,6 +29,8 @@
 :root {
   --Primary-blue-p: #1D91CC;
   --neutral-white: #FFF;
+  --neutral-gray-1-f-9-f-9-f-9: #F9F9F9;
+  --neutral-gray-7606060: #606060;
     /* #color Tint*/
     --Tint-5: #77BDE0;
     --Tint-4: #A5D3EB;
@@ -88,7 +90,10 @@
 :root {
 --value-8px: 8px;
 --value-12px: 12px;
+--value-14px: 14px;
 --value-16px: 16px;
+--value-18px: 18px;
+--value-20px: 20px;
 --value-24px: 24px;
 --value-32px: 32px;
 --value-40px: 40px;
@@ -197,6 +202,24 @@
   url("../Fonts/iransans/Black/Black.woff")format("woff"),
   url("../Fonts/iransans/Black/Black.ttf")format("truetype")
 }
+/* Medium number */
+@font-face {
+  font-family: "Medium-Number";
+  src: url("../Fonts/iransans/Medium-number/Medium-Number.eot");
+  src: url("../Fonts/iransans/Medium-number/Medium-Number.eot?#iefix")format("embedded-opentype"),
+  url("../Fonts/iransans/Medium-number/Medium-Number.woff2")format("woff2"),
+  url("../Fonts/iransans/Medium-number/Medium-Number.woff")format("woff"),
+  url("../Fonts/iransans/Medium-numberk/Medium-number.ttf")format("truetype")
+}
+/* Light number */
+@font-face {
+  font-family: "Light-number";
+  src: url("../Fonts/iransans/Light-number/Light-number.eot");
+  src: url("../Fonts/iransans/Light-number/Light-number.eot?#iefix")format("embedded-opentype"),
+  url("../Fonts/iransans/Light-numberr.woff2")format("woff2"),
+  url("../Fonts/iransans/Light-number/Light-number.woff")format("woff"),
+  url("../Fonts/iransans/Light-number/Light-number.ttf")format("truetype")
+}
 :root {
   --Font-IRANSans-Thin: 'IRANSans-Thin';
   --Font-IRANSans-Light: 'IRANSans-Light';
@@ -207,10 +230,181 @@
   --Font-IRANSans-Bold: 'IRANSans-Bold';
   --Font-IRANSans-Extrabold: 'IRANSans-Extrabold';
   --Font-IRANSans-Black: 'IRANSans-Black';
+  --Font-IRANSans-Medium-number: 'Medium-Number';
+  --Font-IRANSans-Light-number: 'Light-Number';
 }
 /* #End Font */
 
+/* Typography */
+:root {
+  /* display txt size */
+  --txt-display1-bold: 64px;
+  --txt-display2-bold: 56px;
+  /* header txt h1 to h7 */
+  --h1-bold: 44px;
+  --h2-bold: 40px;
+  --h3-bold: 32px;
+  --h4-bold: 24px;
+  --h5-bold: 20px;
+  --h6-bold: 16px;
+  --h7-Semibold: 20px;
+  /*  Body  */
+  --Body-XL-Regular: 20px;
+  --Body-LG-Regular: 18px;
+  --Body-MD-Regular: 16px;
+  --Body-SM-Regular: 14px;
+  /* Caption */
+  --Caption-md-Regular: 12px;
+  --Caption-lg-Bold: 14px;
+  --Caption-sm-Bold: 10px;
+  /* Button */
+  --Button-LG-Medium: 16px;
+  --Button-SM-Medium: 14px;
+  /* Overline */
+  --Overline-LG-Regular: 16px;
+  --Overline-SM-Bold: 12px;
+  /* English numbers */
+  --English-Numbers-regular-18: 18px;
+  /* Header Font size */
+  --H1-XL-Bold: 16px;
+  --H2-LG-Bold: 14px;
+  --H3-MD-Medium: 16px;
+  --H4-SM-Medium: 14px;
+  /* body size */
+  --Body-xxG-Regular: 16px;
+  --Body-xM-Regular: 14px;
+  --Body-LG-Regular: 12px;
+  --Body-SM-Regular: 10px;
+  /* English numbers */
+  --English-Numbers-Bold-18: 12px;
+  --English-Numbers-regular-12: 12px;
+  /* line height */
+  --line-height-180: 180%;
+  --line-height-140: 140%;
+  --line-height-120: 120%;
+  --line-height-Auto: auto;
+  /* Font weight */
+  --Font-weight-400: 400;
+  --Font-weight-500: 500;
+  --Font-weight-600: 600;
+}
+
 /*  */
-  html {
-    direction: rtl;
-  }
+html {
+  direction: rtl;
+}
+
+body {
+  max-width: 1440px;
+  background-color: #636060;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  width: (1440px,100%);
+  height: 104px;
+  flex-shrink: 0;
+  border: 1px solid var(--neutral-gray-1-f-9-f-9-f-9);
+  background-color: var(--neutral-white);
+}
+.nav__logo {
+  position: relative;
+  top: 28px;
+  right: 108px;
+}
+.nav__logo-image {
+  width: 148px;
+  height: 48px;
+  flex-shrink: 0;
+}
+.header-state {
+  position: absolute;
+  top: 32px;
+  right: 316px;
+}
+.header-list {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap-32px);
+  list-style: none;
+  font-family: var(--Font-IRANSans-Regular);
+  font-size: var(--Body-XL-Regular);
+  
+}
+.header__text--link {
+  color: var(--neutral-gray-7606060);
+  text-decoration: none;
+  font-weight: var(--Font-weight-400);
+}
+.Home {
+  color: var(--Primary-blue-p);
+  border-bottom: 1px solid var(--Primary-blue-p);
+  font-weight: var(--Font-weight-600);
+  padding-bottom: 6px;
+}
+.header__text--arrow {
+  display: flex;
+  gap: var(--gap-8px);
+}
+.header-list__svg-arrow {
+  position: relative;
+  top: 4px;
+  width: 24px;
+  height: 24px;
+}
+/* support style */
+.support {
+  display: inline-flex;
+  color: var(--neutral-gray-7606060);
+  font-weight: var(--Font-weight-400);
+  position: relative;
+  top: 35px;
+  left: 230px;
+  gap: var(--gap-8px);
+}
+.support__number {
+  font-family: var(--Font-IRANSans-Light-number);
+  font-weight: var(--Font-weight-600);
+}
+.support__svg-call {
+  position: relative;
+  top: 4px;
+}
+/* auth */
+.auth {
+  position: relative;
+  bottom: 4px;
+}
+.auth__btn {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 134px;
+  height: 40px;
+  flex-shrink: 0;
+  outline: none;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--Primary-blue-p);
+  gap: 8px;
+}
+/* ---------------- class component----------------------- */
+.body-xl {
+  font-family: var(--Font-IRANSans-Regular);
+  font-size: var(--value-20px);
+  font-style: normal;
+  line-height: var(--line-height-180); /* 36px */
+  text-transform: capitalize;
+}
+.Button-SM {
+  color: var(--neutral-white, #FFF);
+  /* Button/sm */
+  font-family: var(--Font-IRANSans-Medium);
+  font-size: var(--value-14px);
+  font-style: normal;
+  font-weight: var(--Font-weight-500);
+  line-height: var(--value-24px); /* 171.429% */
+  text-transform: capitalize;
+}
+/* -------------------------Responsive---------------------------- */
