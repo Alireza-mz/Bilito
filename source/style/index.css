@@ -12,7 +12,6 @@
   }
   img, picture, video, canvas, svg {
     display: block;
-    max-width: 100%;
   }
   input, button, textarea, select {
     font: inherit;
@@ -31,6 +30,7 @@
   --neutral-white: #FFF;
   --neutral-gray-1-f-9-f-9-f-9: #F9F9F9;
   --neutral-gray-7606060: #606060;
+  --primary-tint-1: #E8F4FA;
     /* #color Tint*/
     --Tint-5: #77BDE0;
     --Tint-4: #A5D3EB;
@@ -389,6 +389,16 @@ body {
   background-color: var(--Primary-blue-p);
   gap: 8px;
 }
+/* hamburger menu */
+.hamburger-menu {
+  display: none;
+}
+/* login user */
+.login-user {
+  display: none;
+}
+
+
 /* ---------------- class component----------------------- */
 .body-xl {
   font-family: var(--Font-IRANSans-Regular);
@@ -398,7 +408,7 @@ body {
   text-transform: capitalize;
 }
 .Button-SM {
-  color: var(--neutral-white, #FFF);
+  color: var(--neutral-white);
   /* Button/sm */
   font-family: var(--Font-IRANSans-Medium);
   font-size: var(--value-14px);
@@ -408,3 +418,48 @@ body {
   text-transform: capitalize;
 }
 /* -------------------------Responsive---------------------------- */
+@media (min-width: 0px) and (max-width: 480px){
+  .header-state,.left {
+    display: none;
+  }
+  .nav {
+    min-width: 360px;
+    max-width: 100%;
+    height: 64px;
+    padding: 16px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 88px;
+  }
+  .nav__logo-image {
+    width: 96px;
+    height: 32px;
+  }
+  .nav__logo {
+    position: absolute;
+    top: 16px;
+    right: 40%;
+  }
+  .hamburger-menu {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    position: absolute;
+    right: 20px;
+  }
+  .login-user {
+    display: flex;
+    padding: 4px;
+    gap: 8px;
+    border-radius: 4px;
+    background: var(--primary-tint-1);
+    position: relative;
+    right: 47%;
+  }
+  .login-user__image {
+    display: flex;
+    width: 16px;
+    height: 16px;
+  }
+}
