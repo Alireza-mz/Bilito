@@ -26,11 +26,17 @@
 
 /** #color pallet **/
 :root {
-  --Primary-blue-p: #1D91CC;
+  --primary-blue-p: #1D91CC;
   --neutral-white: #FFF;
   --neutral-gray-1-f-9-f-9-f-9: #F9F9F9;
   --neutral-gray-7606060: #606060;
-  --primary-tint-1: #E8F4FA;
+  --pri-tint-1: #E8F4FA;
+  --neutral-gray-5-adadad: #ADADAD;
+  --neutral-gray-2-ededed: #EDEDED;
+  --primary-shade-1: #1774A3;
+  --primary-shade-3: #0C3A52;
+  --neutral-gray-3-dfdfdf: #DFDFDF;
+  --neutral-gray-8404040: #404040;
     /* #color Tint*/
     --Tint-5: #77BDE0;
     --Tint-4: #A5D3EB;
@@ -287,6 +293,7 @@
   --Font-weight-400: 400;
   --Font-weight-500: 500;
   --Font-weight-600: 600;
+  --Font-weight-700: 700;
 }
 
 /*  */
@@ -328,7 +335,7 @@ body {
   align-items: center;
   gap: var(--gap-32px);
   list-style: none;
-  font-family: var(--Font-IRANSans-Regular);
+  font-family: var(--Font-IRANSans-Light);
   font-size: var(--Body-XL-Regular);
   
 }
@@ -338,10 +345,10 @@ body {
   font-weight: var(--Font-weight-400);
 }
 .Home {
-  color: var(--Primary-blue-p);
-  border-bottom: 1px solid var(--Primary-blue-p);
+  color: var(--primary-blue-p);
+  border-bottom: 2px solid var(--primary-blue-p);
   font-weight: var(--Font-weight-600);
-  padding-bottom: 6px;
+  padding-bottom: 5px;
 }
 .header__text--arrow {
   display: flex;
@@ -386,7 +393,7 @@ body {
   outline: none;
   border-radius: 8px;
   border: none;
-  background-color: var(--Primary-blue-p);
+  background-color: var(--primary-blue-p);
   gap: 8px;
 }
 /* hamburger menu */
@@ -397,15 +404,117 @@ body {
 .login-user {
   display: none;
 }
-
+/* home page screen */
+.home-page-screen {
+  display: flex;
+  background: url('../images/home-page-pic.webp');
+  width: 1440px;
+  height: 340px;
+}
+/* search box international */
+.search-box-International-flights {
+  display: flex;
+  width: 1226px;
+  height: 225px;
+  padding: 24px 25px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid var(--neutral-gray-2-ededed, #EDEDED);
+  background: var(--neutral-white, #FFF);
+  /* Searchbox shadow */
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.08), 0px 0px 4px 0px rgba(0, 0, 0, 0.04);
+  position: absolute;
+  top: 331px;
+  right: 107px;
+}
+/* flight tabbar */
+  .flight-tabbar {
+    display: inline-flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    position: absolute;
+    right: 25px;
+    top: 24px;
+  }
+  .domestic-flight__icon {
+    width: 16px;
+    height: 16px;
+    position: relative;
+    top: 4px;
+  }
+  .international-flight__underline {
+    display: flex;
+    width: 109px;
+    height: 2px;
+    align-self: stretch;
+    border-radius: 8px;
+    background-color: var(--primary-blue-p);
+    position: absolute;
+    top: 32px;
+    z-index: 1000;
+  }
+  .flight-tabbar__underline {
+    width: 1176px;
+    height: 2px;
+    border-radius: 8px;
+    background: var(--neutral-gray-2-ededed);
+    position: absolute;
+    top: 32px;
+    right: 0px;
+  }
+  /* tabbar fill */
+  .tabbar-fill {
+    display: flex;
+    gap: var(--gap-8px);
+    position: absolute;
+    top: 83px;
+    right: 33px;
+  }
+  .international-flight__return:hover,
+  .international-flight__went:hover,
+  .international-flight__multi-route:hover {
+    background: var(--primary-blue-p);
+    border: 1px solid var(--primary-shade-1);
+    color: var(--neutral-white);
+  }
+  /* flight details */
+  .flight-details-box {
+    display: flex;
+    position: absolute;
+    top: 153px;
+    right: 25px;
+    gap: var(--gap-16px);
+  }
+  .informationl-flight-box__input {
+    display: flex;
+    gap: var(--gap-24px);
+  }
+  .informationl-flight-box__input input[type=text] {
+    outline: none;
+  }
+  .informationl-flight-box__input input[type=text]:hover {
+    outline: 1px solid var(--primary-shade-1, #1774A3);
+  }
+  .informationl-flight-box__input input[type=text]::placeholder {
+    color: var(--neutral-gray-8404040);
+  }
+  .flight-search__btn {
+    display: flex;
+  }
+  .flight-search-button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
 
 /* ---------------- class component----------------------- */
 .body-xl {
-  font-family: var(--Font-IRANSans-Regular);
+  font-family: var(--Font-IRANSans-Light);
   font-size: var(--value-20px);
-  font-style: normal;
   line-height: var(--line-height-180); /* 36px */
-  text-transform: capitalize;
+  /* text-transform: capitalize;` */
 }
 .Button-SM {
   color: var(--neutral-white);
@@ -416,6 +525,87 @@ body {
   font-weight: var(--Font-weight-500);
   line-height: var(--value-24px); /* 171.429% */
   text-transform: capitalize;
+}
+.Header-bold {
+  color: var(--primary-blue-p);
+  font-family: var(--Font-IRANSans-Bold);
+  font-size: var(--value-16px);
+  font-style: normal;
+  font-weight: var(--Font-weight-700);
+  line-height: var(--line-height-140); /* 22.4px */
+  text-transform: capitalize;
+}
+/* Body/md */
+.Body-md {
+  color: var(--neutral-gray-5-adadad);
+  font-family: var(--Font-IRANSans-Medium);
+  font-size: var(--value-16px);
+  font-style: normal;
+  font-weight: var(--Font-weight-400);
+  text-transform: capitalize;
+}
+/* caption md */
+.caption-md {
+  font-family: var(--Font-IRANSans-Regular);
+  font-size: var(--value-12px);
+  font-style: normal;
+  font-weight: var(--Font-weight-400);
+  line-height: var(--line-height-180); /* 21.6px */
+  text-transform: capitalize;
+}
+.fill-tab-btn {
+  display: flex;
+  width: 98px;
+  height: 40px;
+  /* padding: 8px 16px; */
+  justify-content: center;
+  align-items: center;
+
+  color: var(--primary-shade-3);
+  border-radius: 8px;
+  border: 1px solid var(--primary-shade-1);
+  background: var(--neutral-white);
+}
+/* caption lg */
+.caption-lg {
+  font-family: var(--Font-IRANSans-Medium);
+  font-size: var(--value-14px);
+  font-style: normal;
+  font-weight: var(--Font-weight-500);
+  line-height: var(--line-height-180); /* 25.2px */
+}
+/* input text */
+.input-text {
+  width: 180px;
+  height: 48px;
+  padding: 0px 24px 0px 0px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  border: 1px solid var(--neutral-gray-3-dfdfdf);
+  background: var(--neutral-white);
+}
+/* btn */
+.btn {
+  display: flex;
+  width: 160px;
+  height: 48px;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: var(--primary-blue-p, #1D91CC);
+}
+/*  */
+.display-flex {
+  display: flex;
+}
+.display-none {
+  display: none;
+}
+.gap-8 {
+  gap: var(--gap-8px);
 }
 /* -------------------------Responsive---------------------------- */
 @media (min-width: 0px) and (max-width: 480px){
