@@ -9,6 +9,7 @@
   body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    height: 1000px;
   }
   img, picture, video, canvas, svg {
     display: block;
@@ -30,13 +31,14 @@
   --neutral-white: #FFF;
   --neutral-gray-1-f-9-f-9-f-9: #F9F9F9;
   --neutral-gray-7606060: #606060;
-  --pri-tint-1: #E8F4FA;
+  --primary-tint-1: #E8F4FA;
   --neutral-gray-5-adadad: #ADADAD;
   --neutral-gray-2-ededed: #EDEDED;
   --primary-shade-1: #1774A3;
   --primary-shade-3: #0C3A52;
   --neutral-gray-3-dfdfdf: #DFDFDF;
   --neutral-gray-8404040: #404040;
+  --neutral-gray-6868686: #868686;
     /* #color Tint*/
     --Tint-5: #77BDE0;
     --Tint-4: #A5D3EB;
@@ -303,7 +305,7 @@ html {
 
 body {
   max-width: 1440px;
-  background-color: #636060;
+  /* background-color: #636060; */
 }
 .nav {
   display: flex;
@@ -360,6 +362,24 @@ body {
   width: 24px;
   height: 24px;
 }
+  /* ---------navbar => hover underline ease---------- */
+  .header__text--link {
+    position: relative;
+  }
+  .header__text .header__text--link::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    top: 40px;
+    right: 0;
+    bottom: 0;
+    background-color: var(--primary-blue-p);
+    transition: all 0.3s ease;
+  }
+  a.header__text--link:hover::after {
+    width: 100%;
+  }
 /* support style */
 .support {
   display: inline-flex;
@@ -405,7 +425,7 @@ body {
   display: none;
 }
 /* home page screen */
-.home-page-screen {
+.home-page-screen__image {
   display: flex;
   background: url('../images/home-page-pic.webp');
   width: 1440px;
@@ -438,22 +458,24 @@ body {
     right: 25px;
     top: 24px;
   }
+  .icon-airplane {
+    background: url("../images/airplane.svg") no-repeat;
+    width: 16px;
+    height: 16px;
+  }
+  .international-flight__text,
+  .domestic-flight__text {
+    display: flex;
+    gap: 8px;
+  }
+  .international-flight__text:hover,
+  .domestic-flight__text:hover {
+    transform: scale(1.10);
+  }
   .domestic-flight__icon {
     width: 16px;
     height: 16px;
-    position: relative;
     top: 4px;
-  }
-  .international-flight__underline {
-    display: flex;
-    width: 109px;
-    height: 2px;
-    align-self: stretch;
-    border-radius: 8px;
-    background-color: var(--primary-blue-p);
-    position: absolute;
-    top: 32px;
-    z-index: 1000;
   }
   .flight-tabbar__underline {
     width: 1176px;
@@ -469,8 +491,8 @@ body {
     display: flex;
     gap: var(--gap-8px);
     position: absolute;
-    top: 83px;
-    right: 33px;
+    top: 414px;
+    right: 140px;
   }
   .international-flight__return:hover,
   .international-flight__went:hover,
@@ -483,9 +505,16 @@ body {
   .flight-details-box {
     display: flex;
     position: absolute;
-    top: 153px;
-    right: 25px;
+    top: 484px;
+    right: 132px;
     gap: var(--gap-16px);
+  }
+  .flights__destination__lableline,
+  .flights__origin__lableline,
+  .flights__round-trip-date__lableline,
+  .flights__number-passengers__lableline,
+  .flights__class__lableline {
+    display: none;
   }
   .informationl-flight-box__input {
     display: flex;
@@ -508,7 +537,35 @@ body {
     outline: none;
     cursor: pointer;
   }
-
+   /*  hover underline domestic &international-flight  */
+  .domestic-flight {
+    position: relative;
+  }
+  .international-flight {
+    position: relative;
+  }
+  .domestic-flight .domestic-flight__text::after,
+  .international-flight .international-flight__text::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    right: 0;
+    bottom: 0;
+    top: 30px;
+    background-color: var(--primary-blue-p);
+    transition: all 0.3s ease;
+    z-index: 2;
+  }
+  .domestic-flight__text:hover::after,
+  .international-flight__text:hover::after {
+    width: 100%;
+  }
+  .international-flight__text:hover,
+  .domestic-flight__text:hover  {
+    color: var(--primary-blue-p);
+    cursor: pointer;
+    z-index: 222222;
+  }
 /* ---------------- class component----------------------- */
 .body-xl {
   font-family: var(--Font-IRANSans-Light);
@@ -527,7 +584,7 @@ body {
   text-transform: capitalize;
 }
 .Header-bold {
-  color: var(--primary-blue-p);
+  color: var(--neutral-gray-6868686);
   font-family: var(--Font-IRANSans-Bold);
   font-size: var(--value-16px);
   font-style: normal;
@@ -584,6 +641,18 @@ body {
   border: 1px solid var(--neutral-gray-3-dfdfdf);
   background: var(--neutral-white);
 }
+/* Mobile/header/medium14 */
+.H-md14 {
+  color: var(--primary-blue-p);
+  
+  /* Mobile/header/medium14 */
+  font-family: IRANSansXFaNum;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: capitalize;
+}
 /* btn */
 .btn {
   display: flex;
@@ -607,8 +676,11 @@ body {
 .gap-8 {
   gap: var(--gap-8px);
 }
+.color-primary-blue {
+  color: var(--primary-blue-p);
+}
 /* -------------------------Responsive---------------------------- */
-@media (min-width: 0px) and (max-width: 480px){
+@media (width <= 360px){
   .header-state,.left {
     display: none;
   }
@@ -652,4 +724,276 @@ body {
     width: 16px;
     height: 16px;
   }
+  /* home page screen */
+  .home-page-screen__image {
+    display: flex;
+    background: url('../images/home\ page\ screen360px.svg') no-repeat;
+    max-width: 480px;
+    width: 100vw;
+    height: 140px;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .international-flight__icon,.domestic-flight__icon {
+    display: none;
+  }
+  .international-flight__text,
+  .domestic-flight__text {
+    display: block;
+  }
+  /* search box */
+  .flight-tabbar {
+    top: 0px;
+    right: 0px;
+    gap: 0px;
+  }
+  .search-box-International-flights {
+    width: 320px;
+    height: 489px;
+    flex-shrink: 0;
+    top: 224px;
+    right: 20px;
+    border: none;
+    box-shadow: none;
+  }
+  .flight-tabbar__underline {
+    width: 320px;
+  }
+  .international-flight__underline {
+    width: 160px;
+  }
+  .international-flight__text {
+    text-align: center;
+    /* Mobile/header/medium14 */
+    font-family: var(--Font-IRANSans-Medium);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+    width: 160px;
+  }
+  .domestic-flight__text {
+    color: var(--neutral-gray-6868686, #868686);
+    text-align: center;
+    /* Mobile/header/medium14 */
+    font-family: var(--Font-IRANSans-Medium);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+    width: 160px;
+  }
+  .tabbar-fill {
+    width: 320px;
+    right: 20px;
+    gap: 16px;
+    top: 275px;
+    z-index: 1;
+  }
+  .fill-tab-btn {
+    width: 96px;
+    height: 32px;
+  }
+  .mobile-body-reg {
+    color: var(--primary-shade-3);
+    text-align: right;
+    /* Mobile/body/reg10 */
+    font-family: var(--Font-IRANSans-Regular);
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  /* flight-details-box */
+  .icon-airplane {
+    display: none;
+  }
+  .informationl-flight__icon {
+    display: none;
+  }
+  .flight-details-box {
+    display: flex;
+    flex-wrap: wrap;
+    right: 20px;
+    top: 341px;
+  }
+  .gap-8 {
+    gap: 0;
+  }
+  .informationl-flight-box__input {
+    gap: 24;
+    flex-wrap: wrap;
+    width: 320px;
+    height: 40px;
+  }
+  .flights__destination__lableline,
+  .flights__origin__lableline,
+  .flights__round-trip-date__lableline,
+  .flights__number-passengers__lableline,
+  .flights__class__lableline {
+    display: block;
+  }
+  .input-text {
+    width: 320px;
+    height: 40px;
+    padding: 7px 24px 11px 24px;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 235px;
+    flex-shrink: 0;
+  }
+  .flight__origin-destination {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  .informationl-flight-box__input {
+    color: var(--neutral-gray-8404040);
+    font-family: var(--Font-IRANSans-Regular);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 180%; /* 21.6px */
+    text-transform: capitalize;
+  }
+  .flights__destination,
+  .flights__origin,
+  .flights__round-trip-date,
+  .flights__number-passengers,
+  .flights__class {
+    background: transparent;
+    transition: 0.1s ease;
+    z-index: 2222;
+    padding: 6px 24px 0px 0px;
+  }
+  .flights__origin:focus + .flights__origin__lableline, 
+  .flights__origin:valid + .flights__origin__lableline,
+  .flights__destination:focus + .flights__destination__lableline, 
+  .flights__destination:valid + .flights__destination__lableline,
+  .flights__round-trip-date:focus + .flights__round-trip-date__lableline,
+  .flights__round-trip-date:valid + .flights__round-trip-date__lableline,
+  .flights__number-passengers:focus + .flights__number-passengers__lableline,
+  .flights__number-passengers:valid + .flights__number-passengers__lableline,
+  .flights__class:focus + .flights__class__lableline, 
+  .flights__class:valid + .flights__class__lableline {
+    transform: translate(0px, -23px);
+    z-index: 3333;
+    background-color: var(--neutral-white);
+    color: var(--primary-shade-1);
+  }
+  .flights__origin:focus,
+  .flights__origin:valid,
+  .flights__destination:valid,
+  .flights__destination:focus,
+  .flights__round-trip-date:valid,
+  .flights__round-trip-date:focus,
+  .flights__number-passengers:valid,
+  .flights__number-passengers:focus,
+  .flights__class__lableline:valid,
+  .flights__class__lableline:focus {
+    border: 1px solid var(--primary-shade-1);
+  }
+  .flights__origin__lableline {
+    font-family: var(--Font-IRANSans-Regular);
+    position: absolute;
+    right: 25px;
+    top: 10px;
+    padding: 0px 4px;
+    /* font-size: 16px; */
+    transition: 0.2s ease;
+  }
+  .flights__destination__lableline {
+    font-family: var(--Font-IRANSans-Regular);
+    position: absolute;
+    right: 15px;
+    top: 75px;
+    padding: 0 4px;
+    /* font-size: 16px; */
+    transition: 0.2s ease;
+  }
+  .flights__round-trip-date__lableline {
+    font-family: var(--Font-IRANSans-Regular);
+    position: absolute;
+    right: 15px;
+    top: 140px;
+    padding: 0px 4px;
+    /* font-size: 16px; */
+    transition: 0.2s ease;
+  }
+  .flights__number-passengers__lableline {
+    font-family: var(--Font-IRANSans-Regular);
+    position: absolute;
+    right: 15px;
+    top: 200px;
+    padding: 0px 4px;
+    /* font-size: 16px; */
+    transition: 0.2s ease;
+  }
+  .flights__class__lableline {
+    font-family: var(--Font-IRANSans-Regular);
+    position: absolute;
+    right: 15px;
+    top: 265px;
+    padding: 0px 4px;
+    /* font-size: 16px; */
+    transition: 0.2s ease;
+  }
+  .flight-search__btn {
+    position: absolute;
+    top: 324px;
+  }
+  .flights__origin::placeholder,
+  .flights__destination::placeholder,
+  .flights__round-trip-date::placeholder,
+  .flights__number-passengers::placeholder,
+  .flights__class::placeholder {
+    color: transparent !important;
+    background-color: transparent !important;
+  }
+  .informationl-flight-box__input input[type=text]:hover {
+    outline: none;
+  }
+  .btn {
+    width: 320px;
+  }
+  /*  hover underline domestic &international-flight 360px */
+  .domestic-flight {
+    position: relative;
+  }
+  .domestic-flight__text:hover{
+    color: var(--primary-blue-p);
+    cursor: pointer;
+  }
+  .domestic-flight .domestic-flight__text::after,
+  .international-flight .international-flight__text::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    right: 0;
+    bottom: 0;
+    top: 32px;
+    background-color: var(--primary-blue-p);
+    transition: all 0.3s ease;
+  }
+  .domestic-flight__text:hover::after {
+    width: 100%;
+  }
+  .international-flight__text:hover,
+  .domestic-flight__text:hover {
+    transform: scale(1);
+  }
+  .international-flight {
+    position: relative;
+  }
+  .international-flight__text:hover  {
+    color: var(--primary-blue-p);
+    cursor: pointer;
+  }
+  .international-flight__text:hover::after {
+    width: 100%;
+  }
+  /*  */
+
 }
