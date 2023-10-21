@@ -55,13 +55,17 @@
     <main class="main">
         <div class="home-page-screen">
             <div  class="home-page-screen__image"></div>
+            <span class="home-page-screen__text">
+                    راحتی و سرعت در
+                    رزرو بلیط هواپیما
+            </span>
+            <span class="home-page-screen__text home-page-screen__text-brand">با بلیتیو</span>
+            <span class="home-page-screen__text-mobile">راحتی و سرعت در رزرو بلیط هواپیما با بیلیتو</span>
         </div>
         <!-- search box flights -->
         <div class="search-box-International-flights">
-            <!--  -->
             <div class="flight-tabbar">
                 <div class="international-flight display-flex gap-8">
-                    <!-- <i class="icon-airplane"></i> -->
                     <span class="international-flight__text Body-md">
                         <i class="icon-airplane"></i>
                         پرواز خارجی
@@ -74,9 +78,8 @@
                     </span>
                 </div>
                 <div class="flight-tabbar__underline"></div>
-                </div>
             </div>
-            <!--  -->
+        </div>
             <div class="tabbar-fill">
                 <button class="international-flight__went caption-md mobile-body-reg fill-tab-btn">رفت</button>
                 <button  class="international-flight__return caption-md mobile-body-reg fill-tab-btn">رفت‌ و ‌برگشت</button>
@@ -85,27 +88,26 @@
             <div class="flight-details-box">
                 <div class="informationl-flight-box__input caption-lg">
                     <div class="flight__origin-destination gap-8 display-flex">
-                        <input class="flights__origin input-text" required type="text" name="" id="1" placeholder="مبدا">
+                        <input class="flights__origin input-text input-mobile" required type="text" name="" id="1" placeholder="مبدا">
+
                         <div class="flights__origin__lableline">مبدا</div>
                             <img class="informationl-flight__icon" src="./source/images/arrow-2.svg" alt="arrow">
-                        <input class="flights__destination input-text" required  type="text" name="" id="" placeholder="مقصد">
+                        <input class="flights__destination input-text input-mobile" required  type="text" name="" id="" placeholder="مقصد">
                         <div class="flights__destination__lableline">مقصد</div>
                     </div>
-                    <input class="flights__round-trip-date input-text" required type="text" name="" id="2" placeholder="تاریخ رفت و برگشت">
+                    <input class="flights__round-trip-date input-text input-mobile" required type="text" name="" id="2" placeholder="تاریخ رفت و برگشت">
                     <div class="flights__round-trip-date__lableline">تاریخ رفت و برگشت</div>
-                    <input class="flights__number-passengers input-text" required type="text" name="" id="" placeholder="تعداد مسافر">
+                    <input class="flights__number-passengers input-text input-mobile" required type="text" name="" id="" placeholder="تعداد مسافر">
                     <div class="flights__number-passengers__lableline">تعداد مسافر</div>
-                    <input class="flights__class input-text" required type="text" name="" id="" placeholder="کلاس پرواز">
+                    <input class="flights__class input-text input-mobile" required type="text" name="" id="" placeholder="کلاس پرواز">
                     <div class="flights__class__lableline">کلاس پرواز</div>
-                </div>
-                <div class="flight-search__btn">
-                    <button class="flight-search-button btn Button-SM">
-                        <img class="flight-search-btn__icon" src="./source/images/search-normal.svg" alt="search">
-                        <span class="flight-search-btn__text">جستجو</span>
-                    </button>
-                </div>
             </div>
-        </div>
+            <div class="flight-search__btn">
+                <button class="flight-search-button btn Button-SM">
+                    <img class="flight-search-btn__icon" src="./source/images/search-normal.svg" alt="search">
+                    <span class="flight-search-btn__text">جستجو</span>
+                </button>
+            </div>
     </main>
 </body>
 </html>
