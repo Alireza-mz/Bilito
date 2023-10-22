@@ -720,8 +720,18 @@ body {
     right: 195px;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {}
-@media (min-width: 425px) and (max-width: 768px) {}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .flight-search__btn {
+    position: absolute;
+    right: 195px;
+  }
+}
+@media (min-width: 425px) and (max-width: 768px) {
+  .flight-search__btn {
+    position: absolute;
+    right: 195px;
+  }
+}
 @media (min-width:0px) and (max-width: 425px) {
   
   .header-state,.left {
