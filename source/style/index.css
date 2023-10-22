@@ -723,7 +723,7 @@ body {
 @media (min-width: 768px) and (max-width: 1024px) {
   .flight-search__btn {
     position: absolute;
-    right: 195px;
+    /* right: 195px; */
   }
 }
 @media (min-width: 425px) and (max-width: 768px) {
@@ -1085,14 +1085,12 @@ body {
     top: 120px;
     right: 2%;
   }
-  /* .input-mobile  {
-    position: relative;
-    width: 91%;
-    left: 1%;
-  } */
   .flight-search-button {
     width: 95%;
     right: 0;
+  }
+  .flight-search__btn {
+    right: 0px;
   }
 }
 @media (min-width: 375px) and (max-width: 425px) {
@@ -1113,6 +1111,9 @@ body {
   .international-flight__multi-route {
     width: 100%;
   }
+  .flight-search__btn {
+    right: 0px;
+  }
 }
 @media (min-width: 320px) and (max-width: 375px) {
   .tabbar-fill {
@@ -1129,6 +1130,9 @@ body {
   .international-flight__multi-route {
     width: 100%;
   }
+  .flight-search__btn {
+    right: 0px;
+  }
 }
 @media (min-width: 0px) and (max-width: 320px) {
   .tabbar-fill {
@@ -1139,5 +1143,8 @@ body {
     z-index: 1;
     display: flex;
     gap: var(--gap-4px);
+  }
+  .flight-search__btn {
+    right: 0px;
   }
 }
