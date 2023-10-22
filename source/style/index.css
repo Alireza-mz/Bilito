@@ -319,11 +319,14 @@ body {
   background-color: var(--neutral-white);
 }
 .nav__logo {
+  display: flex;
   position: relative;
   top: 28px;
   right: 108px;
 }
 .nav__logo-image {
+  position: relative;
+  bottom: 10px;
   width: 148px;
   height: 48px;
   flex-shrink: 0;
@@ -751,7 +754,7 @@ body {
   }
   .nav__logo {
     position: absolute;
-    top: 8%;
+    /* top: 8%; */
     right: 40%;
     left: 20%;
   }
