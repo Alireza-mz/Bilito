@@ -84,8 +84,9 @@
 --gap-4px: 4px;
 --gap-8px: 8px;
 --gap-12px: 12px;
---gap-18px: 18px;
+--gap-14px: 14px;
 --gap-16px: 16px;
+--gap-18px: 18px;
 --gap-24px: 24px;
 --gap-32px: 32px;
 --gap-40px: 40px;
@@ -408,7 +409,7 @@ body {
 /* auth */
 .auth {
   position: relative;
-  bottom: 4px;
+  bottom: 0px;
 }
 .auth__btn {
   justify-content: center;
@@ -737,7 +738,7 @@ body {
 @media (min-width: 1025px) and (max-width: 1440px) {
   /* nav logo */
 .nav__logo {
-  right: 2%;
+  right: 5%;
 }
 .nav__logo-image {
   bottom: 0px;
@@ -745,14 +746,17 @@ body {
   height: 45px;
 }
 .header-state {
-  right: 18%;
+  right: 20%;
 }
 .header-list {
-  gap: var(--gap-18px);
+  gap: var(--gap-14px);
 }
 .body-xl {
-  font-size: 18px;
+  font-size: 17px;
   font-family: var(--Font-IRANSans-Medium);
+}
+.header__text .header__text--link::after {
+  top: 35px;
 }
 .support {
   left: 95%;
@@ -780,10 +784,10 @@ body {
   width: 95%;
 }
 .international-flight {
-  left: 40%;
+  left: 37%;
 }
 .domestic-flight {
-  left: 40%;
+  left: 37%;
 }
 .tabbar-fill {
   right: 7%;
@@ -811,6 +815,10 @@ body {
   left: 2%;
   width: 100%;
 }
+.left {
+  position: relative;
+  left: 5%;
+}
 }
 @media (min-width: 769px) and (max-width: 1024px) {
 /* navbar */
@@ -822,7 +830,7 @@ body {
 .nav__logo {
   top: 26px;
   position: relative;
-  right: 1%;
+  right: 5%;
 }
 .nav__logo-image {
   width: 85px;
@@ -830,15 +838,15 @@ body {
 }
   /* header state */
 .header-state {
-  right: 13%;
+  right: 17%;
   top: 16px;
 }
   /* header list */
 .header-list {
-  gap: var(--gap-16px);
+  gap: 10px;
 }
   .body-xl {
-  font-size: 16px;
+  font-size: 14px;
   font-family: var(--Font-IRANSans-Medium);
 }
   .header__text .header__text--link::after {
@@ -851,7 +859,7 @@ body {
 /* support */
 .support {
   top: 18px;
-  left: 130px;
+  left: 120px;
   gap: var(--gap-4px);
 }
 .support__svg-call {
@@ -862,7 +870,7 @@ body {
 /* auth navbar */
 .auth {
   position: absolute;
-  top: 16px;
+  top: 14px;
   left: 1%;
 }
 .auth__btn {
@@ -876,8 +884,8 @@ body {
 }
 /* <!-- search box flights --> */
 .search-box-International-flights {
-  width: 85%;
-  right: 7.5%;
+  width: 90%;
+  right: 5%;
 }
 /* flight tabbar */
 .flight-tabbar {
@@ -887,11 +895,11 @@ body {
 }
 /* international flight */
 .international-flight {
-  left: 34%;
+  left: 36%;
 }
 /* domestic flight */
 .domestic-flight {
-  left: 34%;
+  left: 36%;
 }
 /* underline */
 .flight-tabbar__underline {
@@ -899,7 +907,7 @@ body {
 }
 /* tabbar-fill */
 .tabbar-fill {
-  right: 9.5%;
+  right: 7%;
   width: 90%;
   top: 420px;
 }
@@ -913,7 +921,7 @@ body {
 /* flight-details-box */
 .flight-details-box {
   width: 80%;
-  right: 0%;
+  right: 2%;
 }
 /* nformationl-flight-box__input */
 .informationl-flight-box__input {
@@ -923,16 +931,16 @@ body {
 }
 .flight__origin-destination {
   position: relative;
-  right: 17%;
+  right: 10%;
   width: 43%;
 }
 .input-text-left {
-  width: 18%;
+  width: 20%;
   position: relative;
   right: 125px;
 }
 .input-text-md {
-  width: 46%;
+  width: 55%;
 }
 .input-text {
   height: 35px;
@@ -974,7 +982,10 @@ body {
 .flight-search-btn__text {
   font-size: 10px;
 }
-
+.left {
+  position: relative;
+  left: 5%;
+}
 }
 @media (min-width: 426px) and (max-width: 768px) {
   .nav {
