@@ -987,7 +987,7 @@ body {
   .hamburger-menu {
     display: block;
     position: relative;
-    right: 20px;
+    right: 5%;
     top: 5px;
   }
   .hamburger-meni__image {
@@ -1014,7 +1014,7 @@ body {
   height: 35px;
   position: absolute;
   top: 15px;
-  right:92%;
+  right:90%;
 }
 .login-user__image {
   width: 80%;
